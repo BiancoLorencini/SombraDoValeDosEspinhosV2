@@ -1,0 +1,24 @@
+
+.tableBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  background-image: url('./assets/mainBackgroundTable/tableBackground.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.textBackground {
+  width: 30vw;
+  height: 100%;
+  margin-left: 15px;
+}
+
+
+
+

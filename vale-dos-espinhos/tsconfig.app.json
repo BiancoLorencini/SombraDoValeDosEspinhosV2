@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "target": "ES2022", // Define a versão do ECMAScript
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // Bibliotecas a serem incluídas
+    "module": "ESNext", // Módulo a ser usado
+    "moduleResolution": "node", // Usar resolução de módulos do Node.js
+    "skipLibCheck": true, // Ignorar verificação de tipos em arquivos de definição
+    "strict": true, // Ativar todas as verificações estritas
+    "noUnusedLocals": true, // Erro para variáveis não utilizadas
+    "noUnusedParameters": true, // Erro para parâmetros não utilizados
+    "noFallthroughCasesInSwitch": true, // Erro para casos de queda em switch
+    "noUncheckedSideEffectImports": true, // Erro para importações com efeitos colaterais não verificados
+    "jsx": "react-jsx", // Configuração para JSX
+    "useDefineForClassFields": true, // Usar a definição de campos de classe
+    "isolatedModules": true, // Cada arquivo é tratado como um módulo isolado
+    "noEmit": true, // Defina como true para não gerar arquivos de saída
+    "tsBuildInfoFile": "./.tmp/tsconfig.app.tsbuildinfo", // Localização do arquivo de informações de construção
+    "allowImportingTsExtensions": true // Permitir importações com extensão .ts
   },
-  "include": ["src"]
+  "include": [
+    "src", // Inclui a pasta src
+    "declarations.d.ts" // Inclui o arquivo de declarações
+  ],
+  "exclude": [
+    "node_modules", // Exclui a pasta node_modules
+    "**/*.spec.ts" // Exclui arquivos de teste, se aplicável
+  ]
 }
